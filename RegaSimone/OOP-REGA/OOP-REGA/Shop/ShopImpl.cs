@@ -25,7 +25,7 @@ namespace FarmingSimulator
         }
         public Seed buy(SeedType st)
         {
-            throw new NotImplementedException();
+            return new SeedImpl(st);
         }
 
         public HashSet<FoodType> GetFoodItemList()

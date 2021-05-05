@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Timers;
+using System.Threading.Tasks;
 
 namespace FarmingSimulator
 {
@@ -17,7 +19,15 @@ namespace FarmingSimulator
             this.ss = SeedState.PLANTED;
             this.growTime = SeedTypeMethods.GetGrowTime(st);
             this.ofWhichFood = SeedTypeMethods.GetFoodType(st);
+            GrowSchedule();
+
         }
+
+        private void GrowSchedule()
+        {
+            Timer t = new Timer((int)SeedTypeMethods.GetGrowTime(st));
+        }
+
 
         public FoodType GetFoodType()
         {
