@@ -12,6 +12,7 @@ namespace FarmingSimulator
         private SeedState ss;
         private long growTime;
         private FoodType ofWhichFood;
+        
 
         public SeedImpl(SeedType st)
         {
@@ -19,15 +20,14 @@ namespace FarmingSimulator
             this.ss = SeedState.PLANTED;
             this.growTime = SeedTypeMethods.GetGrowTime(st);
             this.ofWhichFood = SeedTypeMethods.GetFoodType(st);
-            GrowSchedule();
-
+            WaitGrow();
         }
 
-        private void GrowSchedule()
+        private async void WaitGrow()
         {
-            Timer t = new Timer((int)SeedTypeMethods.GetGrowTime(st));
+            await Task.Delay((int)growTime);
+            Grow();
         }
-
 
         public FoodType GetFoodType()
         {
@@ -58,6 +58,12 @@ namespace FarmingSimulator
         {
             this.ss = SeedState.HARVESTED;
             return ofWhichFood;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is SeedImpl impl &&
+                   ss == impl.ss;
         }
     }
 }
