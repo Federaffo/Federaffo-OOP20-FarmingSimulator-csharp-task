@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documenti\\università\\2 ANNO\\OOP\\progetto esame\\FarmingC\\FabbriLinda\\OOP-Fabbri\\OOP-Fabbri\\OOP-Fabbri.csproj": {}
+    "C:\\Users\\Simon\\Desktop\\ProgettoOOP\\Federaffo-OOP20-FarmingSimulator-csharp-task\\FabbriLinda\\OOP-Fabbri\\OOP-Fabbri\\OOP-Fabbri.csproj": {}
   },
   "projects": {
-    "D:\\Documenti\\università\\2 ANNO\\OOP\\progetto esame\\FarmingC\\FabbriLinda\\OOP-Fabbri\\OOP-Fabbri\\OOP-Fabbri.csproj": {
+    "C:\\Users\\Simon\\Desktop\\ProgettoOOP\\Federaffo-OOP20-FarmingSimulator-csharp-task\\FabbriLinda\\OOP-Fabbri\\OOP-Fabbri\\OOP-Fabbri.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documenti\\università\\2 ANNO\\OOP\\progetto esame\\FarmingC\\FabbriLinda\\OOP-Fabbri\\OOP-Fabbri\\OOP-Fabbri.csproj",
+        "projectUniqueName": "C:\\Users\\Simon\\Desktop\\ProgettoOOP\\Federaffo-OOP20-FarmingSimulator-csharp-task\\FabbriLinda\\OOP-Fabbri\\OOP-Fabbri\\OOP-Fabbri.csproj",
         "projectName": "OOP-Fabbri",
-        "projectPath": "D:\\Documenti\\università\\2 ANNO\\OOP\\progetto esame\\FarmingC\\FabbriLinda\\OOP-Fabbri\\OOP-Fabbri\\OOP-Fabbri.csproj",
-        "packagesPath": "C:\\Users\\Linda\\.nuget\\packages\\",
-        "outputPath": "D:\\Documenti\\università\\2 ANNO\\OOP\\progetto esame\\FarmingC\\FabbriLinda\\OOP-Fabbri\\OOP-Fabbri\\obj\\",
+        "projectPath": "C:\\Users\\Simon\\Desktop\\ProgettoOOP\\Federaffo-OOP20-FarmingSimulator-csharp-task\\FabbriLinda\\OOP-Fabbri\\OOP-Fabbri\\OOP-Fabbri.csproj",
+        "packagesPath": "C:\\Users\\Simon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Simon\\Desktop\\ProgettoOOP\\Federaffo-OOP20-FarmingSimulator-csharp-task\\FabbriLinda\\OOP-Fabbri\\OOP-Fabbri\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Linda\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Simon\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +26,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -38,7 +37,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
@@ -68,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

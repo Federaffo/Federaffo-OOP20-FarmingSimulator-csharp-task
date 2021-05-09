@@ -34,7 +34,7 @@ namespace OOP_Fabbri.util
 
         public FoodType Harvest()
         {
-            throw new NotImplementedException();
+            return FoodType.FOOD;
         }
     }
 }
