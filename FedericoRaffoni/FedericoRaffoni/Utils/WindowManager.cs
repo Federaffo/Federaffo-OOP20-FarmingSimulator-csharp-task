@@ -5,9 +5,9 @@ namespace FedericoRaffoni.OOP
 {
     internal class WindowManager
     {
-        private Game game;
+        private IGame game;
 
-        public WindowManager(Game game)
+        public WindowManager(IGame game)
         {
             this.game = game;
         }

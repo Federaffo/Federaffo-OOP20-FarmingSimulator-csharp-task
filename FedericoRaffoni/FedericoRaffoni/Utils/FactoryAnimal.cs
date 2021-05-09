@@ -10,17 +10,17 @@ namespace FedericoRaffoni.Utils
     {
         internal Animal GetChicken(object p)
         {
-            throw new NotImplementedException();
+            return new Animal();
         }
 
         internal Animal GetCow(object p)
         {
-            throw new NotImplementedException();
+            return new Animal();
         }
 
         internal Animal GetPig(object p)
         {
-            throw new NotImplementedException();
+            return new Animal();
         }
     }
 }

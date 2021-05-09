@@ -10,7 +10,7 @@ namespace FedericoRaffoni.Utils
         bool playerBuy(Player pg, SeedType st, int quantity);
         double PlayerSell(Shop shop, Player pg);
         void FieldInteraction(Player pg, FieldBlock myBlock);
-        void UnlockBlock(Player pg, Map map, Block temp);
+        void UnlockBlock(Player pg, IMap map, Block temp);
         void PlayerAnimal(Player pg, object p);
     }
 }

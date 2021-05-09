@@ -6,21 +6,38 @@ using FedericoRaffoni.OOP;
 namespace FedericoRaffoni.Utils
 {
     [Serializable]
-    class MapImpl : Map
+    class MapImpl : IMap
     {
+        public override bool Equals(object obj)
+        {
+            return base.Equals(obj);
+        }
+
         public object GetBlockCoordinates(object p)
         {
-            throw new NotImplementedException();
+            return new object();
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
         }
 
         public HashSet<Block> GetMapSet()
         {
-            throw new NotImplementedException();
+            return new HashSet<Block>();
         }
 
-        public object GetRandomFilterBlock(object p)
+        public override string ToString()
         {
-            throw new NotImplementedException();
+            return base.ToString();
         }
+
+        Block IMap.GetRandomFilterBlock(Predicate<Block> p)
+        {
+            return new Block();
+        }
+
+
     }
 }

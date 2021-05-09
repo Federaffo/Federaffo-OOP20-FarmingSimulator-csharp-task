@@ -5,11 +5,11 @@ using FedericoRaffoni.OOP;
 
 namespace FedericoRaffoni.Utils
 {
-    interface Map
+    interface IMap
     {
 
         HashSet<Block> GetMapSet();
         object GetBlockCoordinates(object p);
-        object GetRandomFilterBlock(object p);
+        Block GetRandomFilterBlock(Predicate<Block> p);
     }
 }

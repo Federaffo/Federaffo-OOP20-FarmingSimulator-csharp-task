@@ -22,9 +22,19 @@ namespace FedericoRaffoni.Utils
             throw new NotImplementedException();
         }
 
+        public override bool Equals(object obj)
+        {
+            return base.Equals(obj);
+        }
+
         public Block GetBlockPosition(object p)
         {
             throw new NotImplementedException();
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
         }
 
         public Inventory GetInventory()
@@ -49,6 +59,11 @@ namespace FedericoRaffoni.Utils
         public Optional<Animal> NearestAnimal(List<Animal> animals)
         {
             throw new NotImplementedException();
+        }
+
+        public override string ToString()
+        {
+            return base.ToString();
         }
     }
 }

@@ -6,6 +6,7 @@ namespace FedericoRaffoni.Utils
 {
     enum  BlockType
     {
-        FIELD
+        FIELD,
+        STALL
     }
 }

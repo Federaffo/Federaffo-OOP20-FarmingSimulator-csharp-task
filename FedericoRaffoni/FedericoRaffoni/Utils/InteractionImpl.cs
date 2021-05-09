@@ -29,7 +29,7 @@ namespace FedericoRaffoni.Utils
             throw new NotImplementedException();
         }
 
-        public void UnlockBlock(Player pg, Map map, Block temp)
+        public void UnlockBlock(Player pg, IMap map, Block temp)
         {
             throw new NotImplementedException();
         }
