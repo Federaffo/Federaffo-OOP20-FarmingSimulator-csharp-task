@@ -8,32 +8,32 @@ namespace OOP_Fabbri.block
     class FactoryBlock
     {
 
-        public BlockImpl GetTerrainBlock(int posx, int posy)
+        public BlockImpl GetTerrainBlock()
         {
             return new BlockImpl(BlockType.TERRAIN, true, false);
         }
 
-        public BlockImpl getObstacleBlock(int posx, int posy)
+        public BlockImpl GetObstacleBlock()
         {
             return new BlockImpl(BlockType.WALL, false, false);
         }
 
-        public BlockImpl getFieldBlock(int posx, int posy)
+        public BlockImpl GetFieldBlock()
         {
             return new BlockFieldImpl(BlockType.FIELD, true, true);
         }
 
-        public BlockImpl getLockedBlock(int posx, int posy)
+        public BlockImpl GetLockedBlock()
         {
             return new UnlockableBlockImpl(BlockType.LOCKED, true, true);
         }
 
-        public BlockImpl getWaterBlock(int posx, int posy)
+        public BlockImpl GetWaterBlock()
         {
             return new BlockImpl(BlockType.WATER, true, false);
         }
 
-        public BlockImpl getStallBlock(int posx, int posy)
+        public BlockImpl GetStallBlock()
         {
             return new BlockImpl(BlockType.STALL, true, false);
         }
