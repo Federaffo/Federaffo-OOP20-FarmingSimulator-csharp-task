@@ -11,7 +11,7 @@ namespace FedericoRaffoni
         }
 
         [Test]
-        public void Test1()
+        public void TestSave()
         {
             GameSaver saver = new GameSaver();
             GameImpl myGame = new GameImpl();
@@ -25,12 +25,31 @@ namespace FedericoRaffoni
         }
 
         [Test]
-        public void TestEngine()
+        public void TestEngineNewGame()
         {
             Engine engine = new Engine();
             engine.Update(false);
 
-            Assert.NotNull(engine.game);
+            GameSaver saver = new GameSaver();
+            GameImpl myGame = new GameImpl();
+            saver.Save(myGame);
+
+            Assert.NotNull(engine.Game);
+            Assert.AreNotEqual(myGame, engine.Game);
+        }
+
+        [Test]
+        public void TestEngineOldGame()
+        {
+            GameSaver saver = new GameSaver();
+            GameImpl myGame = new GameImpl();
+            saver.Save(myGame);
+
+
+            Engine engine = new Engine();
+            engine.Update(true);
+
+            Assert.AreEqual(engine.Game, myGame);
         }
 
     }

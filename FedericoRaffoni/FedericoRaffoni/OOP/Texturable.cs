@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FedericoRaffoni.OOP
 {
-    interface Texturable
+    interface ITexturable
     {
     }
 }

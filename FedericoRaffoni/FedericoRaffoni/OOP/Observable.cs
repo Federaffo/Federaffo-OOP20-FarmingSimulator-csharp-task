@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FedericoRaffoni.OOP
 {
-    interface Observable <X>
+    interface IObservable <X>
     {
 
     void NotifyObserver(X notify);
@@ -12,6 +12,6 @@ namespace FedericoRaffoni.OOP
         /**
          * @param obs is a new Observer to be added
          */
-        void AddObserver(Observer<X> obs);
+        void AddObserver(IObserver<X> obs);
     }
 }

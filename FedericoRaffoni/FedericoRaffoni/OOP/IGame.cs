@@ -5,8 +5,9 @@ using FedericoRaffoni.Utils;
 
 namespace FedericoRaffoni.OOP
 {
-    interface Game
+    interface IGame
     {
+        GameState State { get;}
 
         void LoadGame(MapImpl map, PlayerImpl player);
 
@@ -14,21 +15,6 @@ namespace FedericoRaffoni.OOP
          * update all entities
          */
         void Loop();
-
-        /**
-         * @return Map
-         */
-        Map GetMap();
-
-        /**
-         * @return Player
-         */
-        Player GetPlayer();
-
-        /**
-         * @return Shop
-         */
-        Shop GetShop();
 
         /**
          * @param st
@@ -44,19 +30,9 @@ namespace FedericoRaffoni.OOP
         double SellAll();
 
         /**
-         * @return the state of the Game
-         */
-        GameState GetState();
-
-        /**
          * This method manage the interaction between Player and FieldBlock.
          */
         void Interact();
-
-        /**
-         * @return the Price to unlock LOCKED Block
-         */
-        double GetUnlockPrice();
 
         /**
          * This method grow all seed.
@@ -77,11 +53,6 @@ namespace FedericoRaffoni.OOP
          * updates GameState and put it on INFO, or PLAY if was already INFO.
          */
         void Info();
-
-        /**
-         * @return a List of the current Animals.
-         */
-        List<Animal> GetAllAnimals();
 
         /**
          * clear current animals and generate new animals.

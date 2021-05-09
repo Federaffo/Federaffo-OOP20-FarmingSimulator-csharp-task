@@ -6,14 +6,13 @@ using FedericoRaffoni.Utils;
 
 namespace FedericoRaffoni.OOP
 {
-    class Engine : Observer<Boolean>
+    class Engine : IObserver<Boolean>
     {
 
         private static int TICK_TIME = 20;
         private MusicPlayer player;
         private WindowManager window;
-        private Timer timer;
-        public Game game { get; private set; }
+        public IGame Game { get; private set; }
 
         // = new GameImpl();
         private GameState gameState = GameState.PLAY;
@@ -27,13 +26,13 @@ namespace FedericoRaffoni.OOP
         {
             if (loadLastGame)
             {
-                this.game = gameSaver.Load();
-                this.game.GrowAllSeed();
-                this.game.ResetAnimals();
+                this.Game = gameSaver.Load();
+                this.Game.GrowAllSeed();
+                this.Game.ResetAnimals();
             }
             else
             {
-                this.game = new GameImpl();
+                this.Game = new GameImpl();
             }
             this.Start();
         }
@@ -47,12 +46,12 @@ namespace FedericoRaffoni.OOP
             if (gameSaver.IsSavingPresent())
             {
                 GamePreloader preloader = new GamePreloader();
-                preloader.addObserver(this);
-                preloader.askToLoad();
+                preloader.AddObserver(this);
+                preloader.AskToLoad();
             }
             else
             {
-                this.game = new GameImpl();
+                this.Game = new GameImpl();
                 this.Start();
             }
 
@@ -65,10 +64,10 @@ namespace FedericoRaffoni.OOP
         {
 
             player = new MusicPlayer();
-            window = new WindowManager(game);
+            window = new WindowManager(Game);
 
 
-            Timer aTimer = new Timer(20);
+            Timer aTimer = new Timer(TICK_TIME);
 
             aTimer.Start();
             aTimer.Elapsed += OnTimedEvent;
@@ -78,11 +77,11 @@ namespace FedericoRaffoni.OOP
 
         private void OnTimedEvent(Object source, ElapsedEventArgs e)
         {
-            game.Loop();
+            Game.Loop();
 
-            if (gameState != game.GetState())
+            if (gameState != Game.State)
             {
-                gameState = game.GetState();
+                gameState = Game.State;
                 window.SetWindow(gameState);
             }
         }

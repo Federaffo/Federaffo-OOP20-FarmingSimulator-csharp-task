@@ -4,13 +4,13 @@ namespace FedericoRaffoni.OOP
 {
     internal class GamePreloader
     {
-        private Observer<Boolean> obs;
-        internal void addObserver(Observer<Boolean> engine)
+        private IObserver<Boolean> obs;
+        internal void AddObserver(IObserver<Boolean> engine)
         {
             obs = engine;
         }
 
-        internal void askToLoad()
+        internal void AskToLoad()
         {
                 int result = 0;
             do

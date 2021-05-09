@@ -29,7 +29,11 @@ namespace FedericoRaffoni.OOP
             IFormatter formatter = new BinaryFormatter();
 
             Stream stream = new FileStream(filePath, FileMode.Open, FileAccess.Read);
-            return (GameImpl) formatter.Deserialize(stream);
+
+            GameImpl g = (GameImpl) formatter.Deserialize(stream);
+            stream.Close();
+
+            return g;
         }
     }
 }

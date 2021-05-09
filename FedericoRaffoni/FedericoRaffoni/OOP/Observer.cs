@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FedericoRaffoni.OOP
 {
-    interface Observer <X>
+    interface IObserver <X>
     {
         void Update(X notify);
     }
