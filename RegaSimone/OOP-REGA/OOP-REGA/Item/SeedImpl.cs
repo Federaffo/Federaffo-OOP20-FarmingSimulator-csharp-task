@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Timers;
+using System.Threading.Tasks;
 
 namespace FarmingSimulator
 {
@@ -10,6 +12,7 @@ namespace FarmingSimulator
         private SeedState ss;
         private long growTime;
         private FoodType ofWhichFood;
+        
 
         public SeedImpl(SeedType st)
         {
@@ -17,6 +20,13 @@ namespace FarmingSimulator
             this.ss = SeedState.PLANTED;
             this.growTime = SeedTypeMethods.GetGrowTime(st);
             this.ofWhichFood = SeedTypeMethods.GetFoodType(st);
+            WaitGrow();
+        }
+
+        private async void WaitGrow()
+        {
+            await Task.Delay((int)growTime);
+            Grow();
         }
 
         public FoodType GetFoodType()
@@ -48,6 +58,12 @@ namespace FarmingSimulator
         {
             this.ss = SeedState.HARVESTED;
             return ofWhichFood;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is SeedImpl impl &&
+                   ss == impl.ss;
         }
     }
 }
